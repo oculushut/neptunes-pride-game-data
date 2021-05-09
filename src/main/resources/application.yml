@@ -1,0 +1,21 @@
+# logging must be DEBUG for feign to start logging with default logger
+logging:
+  level:
+    com.oculushut.neptune.NeptuneClient: DEBUG
+
+feign:
+  okhttp:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+
+# replace with api settings from specific game
+neptunesPride:
+  apiSettings:
+    apiVersion: 0.1
+    gameNumber: 5857392716414976
+    code: lneFpE
